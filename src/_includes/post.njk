@@ -1,0 +1,15 @@
+---
+layout: "base.njk"
+---
+<script defer src="/scripts/readtime.js"></script>
+<article>
+   <h1>{{ title }}</h1>
+   <label>Published: {{ date }} &bull; <p class="read-time" style="all: unset;"></p></label>
+   {% if image %}
+   <figure>
+      <img src="{{ image }}" alt="{{ title }}"/>
+      <figcaption>{{ caption }}</figcaption>
+   </figure>
+   {% endif %}
+   <div>{{ content | safe }}</div>
+</article>
