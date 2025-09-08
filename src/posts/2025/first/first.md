@@ -8,7 +8,7 @@ date: "2025-08-15"
 tags: "posts"
 ---
 
-Hi! Hello! Howdy! and Ishnu-alah! Welcome to my blog dear reader! I'm stoked to finally have a website of my own up and running. Here's a complimentary post explaining a little bit about who I am and what I am doing.
+Hi! Hello! Howdy! And Ishnu-alah! Welcome to my blog dear reader! I'm stoked to finally have a website of my own up and running. Here's a complimentary post explaining a little bit about who I am and what I am doing.
 
 ## I Suck at Web Development
 
@@ -18,7 +18,7 @@ If you care about the nerdy details, I built this using [Eleventy (11ty)](https:
 
 My obsession with Dieter Rams and European modernism at the time of writing pushed me toward a more minimalistic style choice (maybe it's the same affliction that causes academics to be attracted to pure HTML sites — I'm not quite sure). The [Tiny Brutalist CSS framework by pruger](https://github.com/pruger/tiny-brutalism-css?tab=readme-ov-file) provided a component library that was a perfect fit for my needs. 
 
-The website logo is designed by SCJREAL for my own personal makerI designed the favicon myself, it's supposed to be a dispersive prism which is something that I've always thought looked pretty cool.
+While this website is mainly barebones, I did try to squeeze in a few pieces of artwork for more flavor. The logo is designed by SCJREAL, it represents the logo for my own personal maker pseudonym "PhaseFive Electronics". They did a fantastic job with the design and branding and I'm very happy with how it turned out! I designed the favicon myself, it's supposed to be a dispersive prism which is something that I've always thought looked pretty cool. I also intend to incorporate a lot of custom art pieces here in the form of easter eggs, so be on the lookout for that.
 
 ## Alright, What's All This Then?
 
