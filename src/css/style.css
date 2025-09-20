@@ -19,7 +19,7 @@ html, body {
 
 body.menu--open {
     overflow: hidden; 
-    height: 100vh;    
+    max-height: 100%;    
 }
   
 /* Typography */
