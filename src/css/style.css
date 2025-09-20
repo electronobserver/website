@@ -17,7 +17,7 @@ html, body {
     color: #000;
 }
 
-body.menu--open {
+html.menu--open, body.menu--open {
     overflow: hidden; 
     max-height: 100%;    
 }
