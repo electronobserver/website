@@ -5,5 +5,4 @@ const hamElement = document.querySelector('.hamburger');
 hamElement.addEventListener('click', () => {
     navElement.classList.toggle('nav--open');
     hamElement.classList.toggle('hamburger--open');
-    document.body.classList.toggle('menu--open');
 });
