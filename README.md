@@ -4,7 +4,7 @@
 
 # About
 
-The title is pretty much self-explanatory. Check out the live website [here](/) or on the repository sidebar!
+The title is pretty much self-explanatory. Check out the live website [here](https://electron.observer/) or on the repository sidebar!
 
 ## Credits
 
