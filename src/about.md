@@ -13,4 +13,4 @@ Hello, my name is Hugo. I'm an Electrical Engineer currently based in the Valley
 
 email: [hi[at]electron[dot]observer](mailto:hi@electron.observer)&#129109;    
 github: [electronobserver](https://github.com/electronobserver)&#129109;    
-youtube: [electronobserver](https://youtube.com/electronobserver)&#129109;   
+youtube: [electronobserver](https://www.youtube.com/@electronobserver)&#129109;   
