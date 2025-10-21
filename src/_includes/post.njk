@@ -13,3 +13,14 @@ layout: "base.njk"
    {% endif %}
    <div>{{ content | safe }}</div>
 </article>
+
+<div class="postnav">
+  {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+  {% set nextPost     = collections.posts | getNextCollectionItem(page) %}
+  {% if previousPost %}
+      <a class="button" href="{{ previousPost.url }}" title="{{ previousPost.data.title }}">&#x1F870; Older</a>
+  {% endif %}
+  {% if nextPost %}
+      <a class="button" href="{{ nextPost.url }}" title="{{ nextPost.data.title }}">Newer &#x1F872;</a>
+  {% endif %}
+</div>

@@ -531,6 +531,27 @@ header {
 	}
 }
 
+/* Post Navigation */
+.postnav {
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    gap: 1rem;  
+    padding: 1rem 0 2rem 0;
+    
+}
+
+.postnav .button {
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+
+.postnav .button:hover {
+    background-color: transparent;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
     .col {
