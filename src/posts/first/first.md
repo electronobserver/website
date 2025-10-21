@@ -5,12 +5,12 @@ slug: "first"
 image: "saturn_v_launch.webp"
 caption: "Image Credit: NASA"
 date: "2025-08-15"
-tags: "posts"
+tags: ["posts", "thoughts"]
 ---
 
 Hi! Hello! Howdy! And Ishnu-alah! Welcome to my blog dear reader! I'm stoked to finally have a website of my own up and running. Here's a complimentary post explaining a little bit about who I am and what I am doing.
 
-## I Suck at Web Development
+## I Suck at Web Development 
 
 I will be completely honest and admit that creating this place almost killed me as I haven't touched HTML/CSS since I was a sophomore in high school. In fact, this is actually the second iteration of this website. If you managed to see how the first one I wrote ended up looking like — no you didn't.
 
@@ -29,7 +29,7 @@ While this website is mainly barebones, I did try to squeeze in a few pieces of 
 
 I designed the favicon myself. It’s supposed to be a dispersive prism, which is something I’ve always thought looked pretty cool on its own, not to mention how well it aligns with my areas of study. I plan to add a lot of custom art pieces here in the future in the form of easter eggs, so be on the lookout for that.
 
-## Alright, What's All This Then?
+## Alright, What's All This Then? {#alright-whats-all-this-then}
 
 At the time of writing, I am an electrical engineer by trade working in the space industry. However, I didn't actually follow the most direct path into the field. I was originally set on pursuing illustration, but I decided to apply to undergraduate computer science programs at the last minute because they seemed more practical.
 
@@ -51,6 +51,6 @@ For better or for worse, I haven't been one to share my thoughts and creations o
 
 What I want most from this website is a way to monitor my growth over time or in other words, somewhere to post things I find cool online in hopes of becoming an open source-or-er. 
 
-## Thanks for Reading!
+## Thanks for Reading! {#thanks-for-reading}
 
 I see you've made it to the end without falling asleep. There's probably more that I can say to paint a fuller picture of myself but I'm stopping here because at this point I am failing to form cohesive thoughts. Feel free to take a look around. There's more to come in the future! 
