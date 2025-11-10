@@ -140,6 +140,7 @@ button,
     font-size: 1rem;
     text-align: center;
     text-decoration: none;
+    align-items: center;
     color: #000;
     background-color: #fff;
     border: 2px solid #000;
@@ -152,6 +153,13 @@ button,
 button:hover,
 .button:hover {
     box-shadow: 6px 6px 0 #000;
+}
+
+.button__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25em; 
 }
 
 /* Forms */
@@ -322,11 +330,11 @@ a:hover {
     text-decoration: underline;
 }
 
-.header-anchor {
+.anchor {
     text-decoration: none;
 }
 
-.header-anchor-icon {
+.anchor__icon {
     vertical-align: middle;
     width: 0.9em;
     height: 0.9em;
@@ -336,11 +344,11 @@ a:hover {
     transition: stroke 0.2s ease;
 }
 
-.header-anchor:hover {
+.anchor:hover {
     background-color: transparent;
 }
 
-.header-anchor:hover .header-anchor-icon {
+.anchor:hover .anchor__icon {
     stroke: black;
 }
 

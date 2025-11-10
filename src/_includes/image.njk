@@ -19,9 +19,19 @@ layout: "base.njk"
 
 <div class="postnav">
   {% if pagination.pageNumber > 0 %}
-    <a class="button" href="{{ pagination.hrefs[pagination.pageNumber - 1] }}">&#x1F870; Older</a>
+    <a class="button" href="{{ pagination.hrefs[pagination.pageNumber - 1] }}">
+      <span class="button__content">
+        <span class="material-symbols-outlined icon">arrow_left</span>
+         Older
+      </span>
+    </a>
   {% endif %}
   {% if pagination.pageNumber < pagination.pages.length - 1 %}
-    <a class="button" href="{{ pagination.hrefs[pagination.pageNumber + 1] }}">Newer &#x1F872;</a>
+    <a class="button" href="{{ pagination.hrefs[pagination.pageNumber + 1] }}">
+      <span class="button__content">
+        Newer
+        <span class="material-symbols-outlined icon">arrow_right</span>
+      </span>
+    </a>
   {% endif %}
 </div>

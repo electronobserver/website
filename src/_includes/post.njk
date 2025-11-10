@@ -5,11 +5,9 @@ layout: "base.njk"
 <script defer src="/scripts/readtime.js"></script>
 <article>
   <h1>{{ title }}</h1>
-  {% if item.date %}
     <label>Published: {{ date }} &bull;
       <p class="read-time" style="all: unset;"></p>
     </label>
-  {% endif %}
   {% if image %}
     <figure>
       <img src="{{ image }}" alt="{{ alt }}" title="{{ alt }}"/>
@@ -18,13 +16,24 @@ layout: "base.njk"
   {% endif %}
   <div>{{ content | safe }}</div>
 </article>
+
 <div class="postnav">
   {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
   {% set nextPost     = collections.posts | getNextCollectionItem(page) %}
   {% if previousPost %}
-    <a class="button" href="{{ previousPost.url }}" title="{{ previousPost.data.title }}">&#x1F870; Older</a>
+    <a class="button" href="{{ previousPost.url }}" title="{{ previousPost.data.title }}">
+      <span class="button__content">
+        <span class="material-symbols-outlined icon">arrow_left</span>
+         Older
+      </span>
+    </a>
   {% endif %}
   {% if nextPost %}
-    <a class="button" href="{{ nextPost.url }}" title="{{ nextPost.data.title }}">Newer &#x1F872;</a>
+    <a class="button" href="{{ nextPost.url }}" title="{{ nextPost.data.title }}">
+      <span class="button__content">
+        Newer
+        <span class="material-symbols-outlined icon">arrow_right</span>
+      </span>
+    </a>
   {% endif %}
 </div>
