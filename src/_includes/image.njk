@@ -9,7 +9,7 @@ layout: "base.njk"
    {% endif %}
    {% if item.image %}
     <figure>
-        <img src="/gallery/{{ item.image }}" alt="{{ item.title }}" />
+        <img src="/gallery/{{ item.image }}" alt="{{ item.alt }}" title="{{ item.title }}" class="glightbox" data-title="{{ item.title }}" />
         {% if item.caption %}
           <figcaption>{{ item.caption }}</figcaption>
         {% endif %}

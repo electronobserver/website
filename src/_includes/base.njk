@@ -7,13 +7,16 @@
   <meta name="author" content="Hugo the Immortal">
   <link rel="stylesheet" href="/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
   <link rel="icon" type="image/x-icon" href="/images/favicon/PrismFavicon.png">
   <script defer src="/scripts/hamburger.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js" defer></script>
+  <script src="/scripts/glightbox.js" defer></script>
   <title>{{ title }} | Electron Observer</title>
 </head>
 
 <body>
-    <div class="site container">
+    <div class="websiteWrapper container">
       {% include "partials/header.njk" %}
       <main>
           {{ content | safe }}   

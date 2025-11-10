@@ -57,7 +57,7 @@ picture {
     overflow-wrap: break-word;
 }
 
-.site {
+.websiteWrapper {
     min-height: 100dvh;
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -330,6 +330,7 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Header Link Anchor */
 .anchor {
     text-decoration: none;
 }
@@ -385,7 +386,7 @@ header {
     padding-bottom: 20px;
 }
 
-.logo__img {
+.header__logo {
     display: block;
     width: 75px;
     height: auto;
@@ -446,12 +447,12 @@ header {
     padding: 2rem 0 2rem;
 }
 
-.heart {
+.footer__heart {
     all: unset;
     display: inline-block;
 }
 
-.heart:hover {
+.footer__heart:hover {
     cursor: pointer;
     color: red;
     transition: 0.3s ease 0s;
@@ -485,6 +486,11 @@ header {
 }
 
 /* Index Page */
+.indexContainer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+  
 .atom {
     position: relative;
     width: 50px;
@@ -492,7 +498,7 @@ header {
     margin: 100px auto 100px auto;
 }
 
-.nucleus {
+.atom__nucleus {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -505,7 +511,7 @@ header {
     animation: float 3s ease-in-out infinite;
 }
 
-.orbit {
+.atom__orbit {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -514,25 +520,25 @@ header {
     transform: rotateX(45deg);
 }
 
-.orbit:nth-of-type(2) {
+.atom__orbit:nth-of-type(2) {
     width: 300px;
     height: 300px;
     margin: -150px 0 0 -150px;
 }
 
-.orbit:nth-of-type(3) {
+.atom__orbit:nth-of-type(3) {
     width: 220px;
     height: 220px;
     margin: -110px 0 0 -110px;
 }
 
-.orbit:nth-of-type(4) {
+.atom__orbit:nth-of-type(4) {
     width: 150px;
     height: 150px;
     margin: -75px 0 0 -75px;
 }
 
-.path {
+.atom__path {
     position: absolute;
     top: 0;
     left: 0;
@@ -542,8 +548,7 @@ header {
     transform-style: preserve-3d;
 }
 
-
-.electron {
+.atom__electron {
     position: absolute;
     outline: 5px solid rgba(0, 0, 0, 0.1);
     transform: translate(50%, -50%);
@@ -553,42 +558,42 @@ header {
     border-radius: 50%;
 }
 
-.electron:nth-of-type(1) {
+.atom__electron:nth-of-type(1) {
     right: 50%;
     top: 100%;
 }
 
-.electron:nth-of-type(2) {
+.atom__electron:nth-of-type(2) {
     right: 50%;
     top: 0;
 }
 
-.electron:nth-of-type(3) {
+.atom__electron:nth-of-type(3) {
     right: 100%;
     top: 50%;
 }
 
-.electron:nth-of-type(4) {
+.atom__electron:nth-of-type(4) {
     right: 0%;
     top: 50%;
 }
 
-.orbit:nth-of-type(3) .electron:nth-child(5) {
+.atom__orbit:nth-of-type(3) .atom__electron:nth-child(5) {
     top: 14.64%;
     right: 14.64%;
 }
 
-.orbit:nth-of-type(3) .electron:nth-child(6) {
+.atom__orbit:nth-of-type(3) .atom__electron:nth-child(6) {
     top: 14.64%;
     right: 85.36%;
 }
 
-.orbit:nth-of-type(3) .electron:nth-child(7) {
+.atom__orbit:nth-of-type(3) .atom__electron:nth-child(7) {
     top: 85.36%;
     right: 85.36%;
 }
 
-.orbit:nth-of-type(3) .electron:nth-child(8) {
+.atom__orbit:nth-of-type(3) .atom__electron:nth-child(8) {
     top: 85.36%;
     right: 14.64%;
 }
@@ -614,20 +619,20 @@ header {
     }
 }
 
-.greetings {
+.wordmark {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
     align-items: center;
 }
 
-.typewriter {
+.wordmark__title {
     display: block;
     margin: 0 auto;
     width: max-content;
 }
 
-.typewriter h1 {
+.wordmark__title h1 {
     overflow: hidden;
     text-align: center;
     border-right: .15em solid rgb(0, 0, 0);
@@ -659,7 +664,7 @@ header {
     }
 }
 
-.fade {
+.wordmark__subtitle {
     opacity: 0;
     text-align: center;
     animation: fadeInOpacity 2s ease-in 3s 1 forwards;
@@ -711,6 +716,7 @@ header {
     color: white;
     background-color: none;
     font-size: 1.25rem;
+    font-weight: bold;
     opacity: 0;
     transition: opacity 0.3s ease, background-color 0.3s ease;
 }
