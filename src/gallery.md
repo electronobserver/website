@@ -1,7 +1,20 @@
 ---
 title: "Gallery"
 layout: "base.njk"
+templateEngineOverride: njk
 ---
 
-# Work In Progress (WIP)
-Hang on tight, this page will come soon enough. In the meantime, look elsewhere or [return to the homepage](/).
+<h1>{{ title }}</h1>
+
+<div class="gallery">
+  {% for item in gallery | sort(attribute='date') | reverse %}
+    <figure>
+      <a href="{{ item.slug }}">
+        <div class="gallery__overlay">
+          <img src="/gallery/{{ item.image }}" alt="{{ item.alt }}">
+          <span class="gallery__text">{{ item.alt }}</span>
+        </div>
+      </a>
+    </figure>
+  {% endfor %}
+</div>

@@ -1,0 +1,83 @@
+[
+  {
+    "title": "Moon",
+    "slug": "moon",
+    "image": "moon.jpg",
+    "alt": "Moon",
+    "caption": "Picture of the Moon from Pixbay (test image).",
+    "date": "2025-10-10",
+    "tags": ["gallery", "photos"]
+  },
+  {
+    "title": "Night Sky",
+    "slug": "nightsky",
+    "image": "nightsky.jpg",
+    "alt": "Night Sky",
+    "caption": "Picture of the Night Sky by Dimka Nevedimka on Pexels (test image).",
+    "date": "2025-10-12",
+    "tags": ["gallery", "photos"]
+  },
+  {
+    "title": "Snowboarding",
+    "slug": "snowboarding",
+    "image": "snowboarding.jpg",
+    "alt": "Snowboarding",
+    "caption": "Photo by Fede Roveda on Pexels (test image).",
+    "date": "2025-10-13",
+    "tags": ["gallery", "photos"]
+  },
+  {
+    "title": "Mountain",
+    "slug": "mountain",
+    "image": "mountain.jpg",
+    "alt": "Mountain",
+    "caption": "Mt. Rainier by Vlada Karpovich on Pexels (test image).",
+    "date": "2025-10-14",
+    "tags": ["gallery", "photos"]
+  },
+  {
+    "title": "Auto",
+    "slug": "auto",
+    "image": "auto.jpg",
+    "alt": "Auto",
+    "caption": "Photo by Quentin Martinez on Pexels (test image).",
+    "date": "2025-10-15",
+    "tags": ["gallery", "photos"]
+  },
+  {
+    "title": "Theater",
+    "slug": "theater",
+    "image": "theater.jpg",
+    "alt": "Theater",
+    "caption": "Portland Theater by Rick Han on Pexels (test image).",
+    "date": "2025-10-16",
+    "tags": ["gallery", "photos"]
+  },
+  {
+    "title": "Tiger",
+    "slug": "tiger",
+    "image": "tiger.jpg",
+    "alt": "Tiger",
+    "caption": "Tiger by Julissa Helmuth on Pexels (test image).",
+    "date": "2025-10-17",
+    "tags": ["gallery", "photos"]
+  },
+  {
+    "title": "Castle",
+    "slug": "castle",
+    "image": "castle.jpg",
+    "alt": "Castle",
+    "caption": "By Matt Hardy on Pexels (test image).",
+    "date": "2025-10-18",
+    "tags": ["gallery", "photos"]
+  },
+  {
+    "title": "Desert",
+    "slug": "desert",
+    "image": "desert.jpg",
+    "alt": "Desert",
+    "caption": "Antelope canyon by Paul Ijsendoorn on Pexels (test image).",
+    "date": "2025-10-19",
+    "tags": ["gallery", "photos"]
+  }
+]
