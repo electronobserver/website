@@ -718,13 +718,11 @@ header {
     font-size: 1.25rem;
     font-weight: bold;
     opacity: 0;
-    transition: opacity 0.3s ease, background-color 0.3s ease;
 }
 
 .gallery__overlay:hover .gallery__text {
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.5);
-    border: #385aff 2px solid;
 }
 
 /* Post Navigation */

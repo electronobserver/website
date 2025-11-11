@@ -28,8 +28,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary("md", markdownItOptions);
 
   eleventyConfig.addPassthroughCopy("src/css");
-  eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/scripts");
+  eleventyConfig.addPassthroughCopy("src/images");
+  eleventyConfig.addPassthroughCopy("src/gallery");
 
   return {
     dir: {
