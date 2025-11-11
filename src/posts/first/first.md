@@ -1,11 +1,13 @@
 ---
 title: "We Have Liftoff!"
-layout: "post.njk"
+type: "article"
+description: "Let's get it started in here!"
+tags: ["posts", "thoughts"]
+date: "2025-08-15"
 slug: "first"
 image: "saturn_v_launch.webp"
 caption: "Image Credit: NASA"
-date: "2025-08-15"
-tags: ["posts", "thoughts"]
+layout: "post.njk"
 ---
 
 Hi! Hello! Howdy! And Ishnu-alah! Welcome to my blog dear reader! I'm stoked to finally have a website of my own up and running. Here's a complimentary post explaining a little bit about who I am and what I am doing.
@@ -24,8 +26,10 @@ To wrap everything up under a pretty bow, I opted to use [Netlify](https://www.n
 
 While this website is mainly barebones, I did try to squeeze in a few pieces of artwork for more flavor. The logo in the leftmost corner was comissioned by one of my favorite artists [SCJREAL](https://www.instagram.com/scjreal/). It represents the logo for my own personal maker pseudonym "PhaseFive Electronics". They did a fantastic job with the design and branding and I'm very happy with how it turned out! 
 
-![Artwork](/posts/first/websiteart.webp "Custom Website Artwork")
-<figcaption>Favicon (Left) and Website Logo (Right)</figcaption>
+<figure>
+    <img src="/posts/first/websiteart.webp" alt="Custom Website Artwork">
+    <figcaption>Favicon (Left) and Website Logo (Right)</figcaption>
+</figure>
 
 I designed the favicon myself. It’s supposed to be a dispersive prism, which is something I’ve always thought looked pretty cool on its own, not to mention how well it aligns with my areas of study. I plan to add a lot of custom art pieces here in the future in the form of easter eggs, so be on the lookout for that.
 

@@ -1,5 +1,7 @@
 ---
 title: "About"
+type: "article"
+description: "Observe the observer. Learn more about me and what I love to do!"
 layout: "base.njk"
 ---
 

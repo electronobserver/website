@@ -1,5 +1,6 @@
 ---
 title: "Home"
+description: "eternally hardwired"
 layout: "base.njk"
 ---
 <script defer src="/scripts/splash.js"></script>

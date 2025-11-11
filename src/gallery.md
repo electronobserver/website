@@ -1,9 +1,9 @@
 ---
 title: "Gallery"
+description: "A collection of pictures from yours truly."
 layout: "base.njk"
 templateEngineOverride: njk
 ---
-
 <h1>{{ title }}</h1>
 
 <div class="gallery">

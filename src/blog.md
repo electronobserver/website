@@ -1,19 +1,18 @@
 ---
 title: "Blog"
+description: "Listen to my incoherent ramblings."
 layout: "base.njk"
-templateEngineOverride: njk,md
+templateEngineOverride: njk
 ---
-<h1>
-{{ title }}
-</h1>
+<h1>{{ title }}</h1>
 
 {% for post in collections.posts | reverse %}
-  <article class="box">
+  <section class="box">
     <h2>
       <a class="post__link" href="{{ post.url }}">{{ post.data.title }}
         <span class="material-symbols-outlined">arrow_outward</span>
       </a>
     </h2>
-    Published: {{ post.date.toISOString().slice(0,10) }}
-  </article>
+    <span>Published: {{ post.date.toISOString().slice(0,10) }}</span>
+  </section>
 {% endfor %}
