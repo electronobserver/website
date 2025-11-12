@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="Hugo The Immortal"/>
+  <meta property="og:title" content="{{ title or renderData.title or metadata.title | escape }}">
+  <meta property="og:description" content="{{ description or renderData.description | escape }}">
+  <meta property="og:type" content="{{ type or 'website' }}">
+  <meta property="og:url" content="https://electron.observer{{ page.url }}">
+  <meta property="og:image" content="https://electron.observer/images/favicon/PrismFavicon.png">
+  <meta property="og:image:alt" content="Prism Favicon">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+  <meta name="twitter:title" content="{{ title or renderData.title or metadata.title | escape }}">
+  <meta name="twitter:description" content="{{ description or renderData.description | escape }}">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"/>
+  <link rel="icon" href="/images/favicon/PrismFavicon.png" type="image/x-icon"/>
+  <script defer src="/scripts/hamburger.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script defer src="/scripts/glightbox.js"></script>
+  <title>{{ title }} | Electron Observer</title>
+</head>
+
+<body>
+    <div class="websiteWrapper container">
+      {% include "partials/header.njk" %}
+      <main>
+          {{ content | safe }}   
+      </main>
+      {% include "partials/footer.njk" %}
+    </div>
+</body>
+</html> 

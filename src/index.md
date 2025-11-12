@@ -1,0 +1,45 @@
+---
+title: "Home"
+description: "eternally hardwired"
+layout: "base.njk"
+---
+<script defer src="/scripts/splash.js"></script>
+<div class="indexContainer">
+    <div class="atom">
+        <div class="atom__nucleus"></div>
+        <div class="atom__orbit">
+            <div class="atom__path">
+                <div class="atom__electron"></div>
+                <div class="atom__electron"></div>
+                <div class="atom__electron"></div>
+                <div class="atom__electron"></div>
+            </div>
+        </div>
+        <div class="atom__orbit">
+            <div class="atom__path">
+                <div class="atom__electron"></div>
+                <div class="atom__electron"></div>
+                <div class="atom__electron"></div>
+                <div class="atom__electron"></div>
+                <div class="atom__electron"></div>
+                <div class="atom__electron"></div>
+                <div class="atom__electron"></div>
+                <div class="atom__electron"></div>
+            </div>
+        </div>
+        <div class="atom__orbit">
+            <div class="atom__path">
+                <div class="atom__electron"></div>
+                <div class="atom__electron"></div>
+            </div>
+        </div>
+    </div>
+    <div class="wordmark">
+        <div class="wordmark__title">
+            <h1>ELECTRON OBSERVER</h1>
+        </div>
+        <span class="wordmark__subtitle" id="splash-text">
+            eternally hardwired
+        </span>
+    </div>
+</div>
