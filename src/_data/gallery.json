@@ -79,5 +79,14 @@
     "caption": "Antelope canyon by Paul Ijsendoorn on Pexels (test image).",
     "date": "2025-10-19",
     "tags": ["gallery", "photos"]
+  },
+  {
+    "title": "Pancakes",
+    "slug": "pancakes",
+    "image": "pancakes.jpg",
+    "alt": "Pancakes",
+    "caption": "Delicious pancakes with syrup (test image).",
+    "date": "2025-10-20",
+    "tags": ["gallery", "photos"]
   }
 ]
