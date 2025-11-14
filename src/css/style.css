@@ -31,7 +31,7 @@ p {
     margin-bottom: 1rem;
 }
 
-label {
+.postdata {
     margin-bottom: 1rem;
     display: block;
 }
@@ -57,7 +57,7 @@ picture {
     overflow-wrap: break-word;
 }
 
-.websiteWrapper {
+.wrapper {
     min-height: 100dvh;
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -353,6 +353,16 @@ a:hover {
     stroke: black;
 }
 
+.decorated-link {
+    color: #000;
+    text-decoration: none;
+}
+
+.decorated-link:hover {
+    background-color: transparent;
+    text-decoration: underline;
+}
+
 /* Lists */
 ol {
     margin: 0;
@@ -383,7 +393,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 20px;
+    padding-bottom: 1rem;
+    padding-bottom: 1rem;
 }
 
 .header__logo {
@@ -392,21 +403,22 @@ header {
     height: auto;
 }
 
-.nav__list {
+.navbar__list {
     display: flex;
     column-gap: 40px;
     list-style-type: none;
-    margin: 1em 2em 1em 2em;
+    margin: 1em;
+    margin: 1em;
 }
 
-.nav__link,
+.navbar__link,
 .post__link {
     font-weight: bold;
     color: #000;
     text-decoration: none;
 }
 
-.nav__link:hover,
+.navbar__link:hover,
 .post__link:hover {
     background-color: transparent;
 }
@@ -424,8 +436,8 @@ header {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.nav--open {
-    transform: translateX(0%) !important;
+.navbar--open {
+    transform: translateY(0%) !important;
     background: rgba(0, 0, 0, 0.5);
 }
 
@@ -486,9 +498,12 @@ header {
 }
 
 /* Index Page */
-.indexContainer {
-    padding-top: 100px;
-    padding-bottom: 100px;
+.cover-art {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
   
 .atom {
@@ -700,7 +715,8 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease, border 0.3s ease;
+    transition: transform 0.6s ease, border 0.6s ease;
+    transition: transform 0.6s ease, border 0.6s ease;
 }
 
 .gallery__overlay:hover img {
@@ -715,6 +731,7 @@ header {
     justify-content: center;
     color: white;
     background-color: none;
+    text-transform: lowercase;
     font-size: 1.25rem;
     font-weight: bold;
     opacity: 0;
@@ -752,29 +769,51 @@ header {
         flex: 0 0 100%;
     }
 
-    .nav {
-        position: absolute;
-        z-index: 1;
-        background-color: #fff;
-        width: calc(100% + 2em) !important;
-        margin: 0 -1rem 0 -1rem;
-        top: 80px;
-        left: 0;
-        display: none;
-    }
-
-    .nav__list {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center !important;
-        row-gap: 20px;
-        padding: 25px 0;
-    }
-
-    .nav--open {
-        width: 100%;
-        max-height: 400px;
+    .header__logo {
         display: block;
+        width: auto;
+        height: 40px;
+    }
+
+    /* TODO: find a way to group resets both here and outside when refactoring w/ sass */
+    .navbar {
+        transform: none; 
+    }
+
+    .navbar {
+        position: absolute;
+        display: block;
+        width: calc(100% + 2em) !important; /* full width including container padding */
+        margin: 0 -1rem 0 -1rem;
+        top: calc(40px + 1rem);   /* height of logo + header padding */
+        max-height: 0;    
+        overflow: hidden;            
+        z-index: 1;
+        background-color: #000;                                   
+        text-transform: uppercase;
+        font-weight: normal;
+        transition: max-height 0.6s ease-in-out; 
+    }
+
+    .navbar__list {
+        flex-direction: column;
+        justify-content: center !important;
+        row-gap: 1rem;
+    }
+
+    .navbar__link {
+        font-weight: normal;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .navbar__link::after {
+        content: "/";
+    }
+
+    .navbar--open {
+        max-height: calc(100vh - (40px + 2rem)); 
+        background: #000; 
     }
 
     .hamburger {

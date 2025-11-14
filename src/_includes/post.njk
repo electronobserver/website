@@ -1,13 +1,12 @@
 ---
-layout: "base.njk"
+layout: "base.njk"    
 ---
-
 <script defer src="/scripts/readtime.js"></script>
 <article>
   <h1>{{ title }}</h1>
-    <label>Published: {{ date }} &bull;
+    <span class="postdata">Published: {{ date }} &bull;
       <p class="read-time" style="all: unset;"></p>
-    </label>
+    </span>
   {% if image %}
     <figure>
       <img src="{{ image }}" alt="{{ alt }}" title="{{ alt }}"/>
@@ -16,7 +15,6 @@ layout: "base.njk"
   {% endif %}
   <div>{{ content | safe }}</div>
 </article>
-
 <div class="postnav">
   {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
   {% set nextPost     = collections.posts | getNextCollectionItem(page) %}
