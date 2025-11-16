@@ -68,7 +68,7 @@ Disallow: /
 User agent: PetalBot
 ImagesiftBot
 
-# User-agent: ImagesiftBot
+User-agent: ImagesiftBot
 Disallow: /
 
 #PerplexityBot

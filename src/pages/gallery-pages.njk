@@ -5,17 +5,18 @@ pagination:
   size: 9
   alias: items
   reverse: true
+  addAllPagesToCollections: false
 layout: "base.njk"
-permalink: "gallery/page-{{ pagination.pageNumber + 1 }}/index.html"
+permalink: "gallery/page/{{ pagination.pageNumber + 1 }}/index.html"
 eleventyComputed:
   title: "Gallery"
-  description: "Explore the gallery!"
+  description: "Photos from yours truly."
 ---
 <h1>{{ title }}</h1>
 <div class="gallery">
   {% for item in items | sort(attribute='date') | reverse %}
     <figure>
-      <a href="/gallery/{{ item.slug }}">
+      <a href="/photos/{{ item.slug }}">
         <div class="gallery__overlay">
           <img src="/gallery/{{ item.image }}" alt="{{ item.alt }}">
           <span class="gallery__text">[{{ item.thumbnailcaption }}]</span>

@@ -1,11 +1,10 @@
 ---
 layout: "base.njk"    
 ---
-<script defer src="/scripts/readtime.js"></script>
 <article>
   <h1>{{ title }}</h1>
     <span class="postdata">Published: {{ date }} &bull;
-      <p class="read-time" style="all: unset;"></p>
+      <p id="js-read-time" style="all: unset;"></p>
     </span>
   {% if image %}
     <figure>

@@ -5,11 +5,12 @@ pagination:
   size: 5
   alias: posts
   reverse: true
+  addAllPagesToCollections: false
 eleventyComputed:
   title: "Blog"
   description: "Listen to my incoherent ramblings."
 layout: "base.njk"
-permalink: "/blog/page-{{ pagination.pageNumber + 1 }}/index.html"
+permalink: "/blog/page/{{ pagination.pageNumber + 1 }}/index.html"
 ---
 <h1>{{ title }}</h1>
 {% for post in posts %}

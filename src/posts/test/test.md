@@ -8,6 +8,7 @@ slug: "dummy-file-1"
 image: "/posts/first/websiteart.webp"
 caption: "Placeholder caption"
 layout: "post.njk"
+changefreq: "never"
 ---
 
 ## The Tyger

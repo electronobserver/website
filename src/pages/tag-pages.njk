@@ -5,9 +5,9 @@ pagination:
   size: 1
   alias: tag
   filter: ['posts', 'all']
-  addAllDataToCollections: true
+  addAllPagesToCollections: true
 layout: "base.njk"
-permalink: '/blog/tagged/{{ tag | slugify }}/index.html'
+permalink: '/tagged/{{ tag | slugify }}/index.html'
 eleventyComputed:
   title: "Tagged: '{{ tag }}'"
 ---

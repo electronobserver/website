@@ -57,19 +57,16 @@ picture {
     overflow-wrap: break-word;
 }
 
-.wrapper {
-    min-height: 100dvh;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: minmax(0, 1fr);
-}
-
 /* Containers */
 .container {
+    max-width: 80ch;
+    min-height: 100dvh;
     width: 100%;
     margin: 0 auto;
     padding: 1rem;
-    max-width: 80ch;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: minmax(0, 1fr);
 }
 
 /* Grid System */
@@ -399,7 +396,7 @@ header {
 
 .header__logo {
     display: block;
-    width: 75px;
+    width: 60px;
     height: auto;
 }
 

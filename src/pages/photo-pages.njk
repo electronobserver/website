@@ -4,11 +4,12 @@ pagination:
   data: gallery
   size: 1
   alias: item
+  addAllPagesToCollections: true
 eleventyComputed:
   title: "{{ item.title }}"
   description: "{{ item.description }}"
 layout: "base.njk"
-permalink: "/gallery/{{ item.slug }}/index.html"
+permalink: "/photos/{{ item.slug }}/index.html"
 paginationPrevText: 'Older'
 paginationNextText: 'Newer'
 ---
