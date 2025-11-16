@@ -400,6 +400,7 @@ header {
     height: auto;
 }
 
+/* TODO: Be sure to make mix-ins for these link classes later */
 .navbar__list {
     display: flex;
     column-gap: 40px;
@@ -415,6 +416,7 @@ header {
     text-decoration: none;
 }
 
+.footer__link:hover,
 .navbar__link:hover,
 .post__link:hover {
     background-color: transparent;
@@ -451,9 +453,40 @@ header {
 }
 
 /* Footer */
+.footer {
+    display: flex;           
+    flex-direction: column;      
+    align-items: center;         
+    justify-content: center;     
+}
+
+.footer__link {
+    color: #000;
+    text-decoration: none;
+}
+
 .footer__content {
     text-align: center;
-    padding: 2rem 0 2rem;
+    font-size: smaller;
+    padding: 1rem 0 1rem;
+}
+
+.footer__nav {
+    display: inline-flex;
+    width: fit-content;
+}
+
+.footer__list {
+    display: flex;
+    column-gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+}
+  
+.footer__list li:not(:last-child)::after {
+    content: "|";
 }
 
 .footer__heart {
@@ -610,7 +643,6 @@ header {
     right: 14.64%;
 }
 
-
 @keyframes spin {
     100% {
         transform: rotate(360deg);
@@ -651,42 +683,19 @@ header {
     white-space: nowrap;
     margin: 0 auto;
     letter-spacing: 0em;
-    animation: typing 2.5s steps(40, end), blink-caret .75s step-end infinite;
-}
-
-@keyframes typing {
-    from {
-        width: 0
-    }
-
-    to {
-        width: 100%
-    }
-}
-
-@keyframes blink-caret {
-
-    from,
-    to {
-        border-color: transparent
-    }
-
-    50% {
-        border-color: rgb(0, 0, 0);
-    }
 }
 
 .wordmark__subtitle {
     opacity: 0;
     text-align: center;
-    animation: fadeInOpacity 2s ease-in 3s 1 forwards;
+    animation: fade-in-opacity 1.5s ease-in 1s 1 forwards;
+    animation-delay: 2s;
 }
 
-@keyframes fadeInOpacity {
+@keyframes fade-in-opacity {
     0% {
         opacity: 0;
     }
-
     100% {
         opacity: 1;
     }

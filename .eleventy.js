@@ -1,3 +1,4 @@
+const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
 const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
@@ -5,6 +6,25 @@ const markdownItAttrs = require("markdown-it-attrs");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyImageTransformPlugin);
+  eleventyConfig.addPlugin(feedPlugin, {
+		type: "rss", 
+		outputPath: "/feed.xml",
+    eleventyExcludeFromCollections: true,
+		collection: {
+			name: "posts", 
+			limit: 10,  
+		},
+		metadata: {
+			language: "en",
+			title: "Electron Observer Official Blog",
+			subtitle: "Observe the observations of the observer.",
+			base: "https://electron.observer/",
+			author: {
+				name: "Hugo Takizala",
+				email: "hi@electron.observer", 
+			}
+		}
+	});
 
   const svgIcon = `
     <svg class="anchor__icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
