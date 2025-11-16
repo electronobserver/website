@@ -1,0 +1,24 @@
+---
+templateEngineOverride: njk
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter: ['posts', 'all']
+  addAllPagesToCollections: true
+layout: "base.njk"
+permalink: '/tagged/{{ tag | slugify }}/index.html'
+eleventyComputed:
+  title: "Tagged: '{{ tag }}'"
+---
+<h1>{{ title }}</h1>
+{% for post in collections[tag] | reverse %}
+  <section class="box">
+    <h2>
+      <a class="post__link" href="{{ post.url }}">{{ post.data.title }}
+        <span class="material-symbols-outlined">arrow_outward</span>
+      </a>
+    </h2>
+    <span>Published: {{ post.data.date }}</span>
+  </section>
+{% endfor %}

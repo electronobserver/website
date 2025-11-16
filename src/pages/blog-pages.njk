@@ -1,0 +1,27 @@
+---
+templateEngineOverride: njk
+pagination:
+  data: collections.posts
+  size: 5
+  alias: posts
+  reverse: true
+  addAllPagesToCollections: false
+eleventyComputed:
+  title: "Blog"
+  description: "Listen to my incoherent ramblings."
+layout: "base.njk"
+permalink: "/blog/page/{{ pagination.pageNumber + 1 }}/index.html"
+---
+<h1>{{ title }}</h1>
+{% for post in posts %}
+  <section class="box">
+    <h2>
+      <a class="post__link" href="{{ post.url }}">
+        {{ post.data.title }}
+        <span class="material-symbols-outlined">arrow_outward</span>
+      </a>
+    </h2>
+    <span>Published: {{ post.data.date }}</span>
+  </section>
+{% endfor %}
+{% include "partials/postnav.njk" %}

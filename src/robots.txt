@@ -1,0 +1,84 @@
+# No AI scraping here for you tech bros lmao
+
+#Anthropic-AI
+User agent: anthropic-ai
+Disallow: /
+User agent: Claude-Web
+Disallow: /
+User agent: ClaudeBot
+Disallow: /
+
+#Amazon
+User agent: Amazonbot
+Disallow: /
+
+#Apple
+User agent: Applebot-Extended
+Disallow: /
+User agent: Applebot
+Disallow: /
+
+#ByteDance/TikTok
+User agent: Bytespider
+Disallow: /
+User agent: TikTokSpider
+Disallow: /
+
+#CCBot
+User agent: CCBot
+Disallow: /
+
+#ChatGPT User
+User agent: ChatGPT-User
+Disallow: /
+
+#Cohere AI
+User agent: cohere-ai
+Disallow: /
+
+#Diffbot
+User agent: Diffbot
+Disallow: /
+
+#DuckDuckGo
+User agent: DuckAssistBot
+Disallow: /
+
+#Facebook/Meta
+User agent: FacebookBot
+Disallow: /
+User agent: Meta-ExternalAgent
+Disallow: /
+
+#GoogleOther
+User agent: GoogleOther
+Disallow: /
+User agent: Google-CloudVertexBot
+Disallow: /
+
+#Google-Extended
+User agent: Google-Extended
+Disallow: /
+
+#GPTBot
+User agent: GPTBot
+Disallow: /
+
+#Huawei
+User agent: PetalBot
+ImagesiftBot
+
+User-agent: ImagesiftBot
+Disallow: /
+
+#PerplexityBot
+User-agent: PerplexityBot
+Disallow: /
+
+# Webz.io
+User agent: OmigiliBot
+Disallow: /
+User-agent: Omigili
+Disallow: /
+
+Sitemap: https://electron.observer/sitemap.xml
