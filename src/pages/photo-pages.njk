@@ -10,23 +10,26 @@ eleventyComputed:
   description: "{{ item.description }}"
 layout: "base.njk"
 permalink: "/photos/{{ item.slug }}/index.html"
-paginationPrevText: 'Older'
-paginationNextText: 'Newer'
 ---
+{% from "partials/macros.njk" import postnav %}
+{% set postNav = {
+  prevCondition: pagination.pageNumber > 0,
+  prevLink: pagination.hrefs[pagination.pageNumber - 1],
+  nextCondition: pagination.pageNumber < pagination.pages.length - 1,
+  nextLink: pagination.hrefs[pagination.pageNumber + 1],
+  prevText: "Older",
+  nextText: "Newer" 
+} %}
+
 <div class="box">
-   <h1>{{ item.title }}</h1>
-  {% if item.date %}
-    <span class="postdata">Published: {{ item.date }}</span>
-   {% endif %}
-   {% if item.image %}
-    <figure>
-        <a href="/gallery/{{ item.image }}" class="glightbox">
-          <img src="/gallery/{{ item.image }}" alt="{{ item.alt }}">
-        </a>
-        {% if item.caption %}
-          <figcaption>{{ item.caption }}</figcaption>
-        {% endif %}
-    </figure>
-   {% endif %}
+  <h1>{{ item.title }}</h1>
+  <span class="postdata">Published: {{ item.date }}</span>
+  <figure>
+    <a href="/gallery/{{ item.image }}" class="glightbox">
+      <img src="/gallery/{{ item.image }}" alt="{{ item.alt }}">
+    </a>
+    <figcaption>{{ item.caption }}</figcaption>
+  </figure>
 </div>
-{% include "partials/postnav.njk" %}
+
+{{ postnav(postNav) }}

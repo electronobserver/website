@@ -1,0 +1,39 @@
+{# Button: General-purpose buttons #}
+{% macro button(text, url) %}
+<div class="postnav">
+    <a href="{{ url }}">
+        <button>
+            <span class="button__content">
+                {{ text }}
+                <span class="material-symbols-outlined icon">arrow_right</span>
+            </span>
+        </button>
+    </a>
+</div>
+{% endmacro %}
+
+{# PostNav: Post navigation buttons for collections/pagination pages #}
+{% macro postnav(data) %}
+<nav class="postnav">
+  {% if data.prevCondition %}
+    <a href="{{ data.prevLink }}">
+      <button>
+        <span class="button__content">
+          <span class="material-symbols-outlined icon">arrow_left</span>
+          {{ data.prevText | default('Prev') }}
+        </span>
+      </button>
+    </a>
+  {% endif %}
+  {% if data.nextCondition %}
+    <a href="{{ data.nextLink }}">
+      <button>
+        <span class="button__content">
+          {{ data.nextText | default('Next') }}
+          <span class="material-symbols-outlined icon">arrow_right</span>
+        </span>
+      </button>
+    </a>
+  {% endif %}
+</nav>
+{% endmacro %}

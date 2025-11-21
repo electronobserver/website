@@ -6,13 +6,22 @@ pagination:
   alias: items
   reverse: true
   addAllPagesToCollections: false
-layout: "base.njk"
-permalink: "gallery/page/{{ pagination.pageNumber + 1 }}/index.html"
 eleventyComputed:
   title: "Gallery"
   description: "Photos from yours truly."
+layout: "base.njk"
+permalink: "gallery/page/{{ pagination.pageNumber + 1 }}/index.html"
 ---
+{% from "partials/macros.njk" import postnav %}
+{% set postNav = {
+  prevCondition: pagination.pageNumber > 0,
+  prevLink: pagination.hrefs[pagination.pageNumber - 1],
+  nextCondition: pagination.pageNumber < pagination.pages.length - 1,
+  nextLink: pagination.hrefs[pagination.pageNumber + 1]
+} %}
+
 <h1>{{ title }}</h1>
+
 <div class="gallery">
   {% for item in items | sort(attribute='date') | reverse %}
     <figure>
@@ -25,4 +34,5 @@ eleventyComputed:
     </figure>
   {% endfor %}
 </div>
-{% include "partials/postnav.njk" %}
+
+{{ postnav(postNav) }}

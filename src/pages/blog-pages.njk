@@ -12,16 +12,29 @@ eleventyComputed:
 layout: "base.njk"
 permalink: "/blog/page/{{ pagination.pageNumber + 1 }}/index.html"
 ---
+{% from "partials/macros.njk" import postnav %}
+{% set prevItem = pagination.pageNumber > 0 %}
+{% set nextItem = pagination.pageNumber < pagination.pages.length - 1 %}
+{% set prevLink = prevItem and pagination.hrefs[pagination.pageNumber - 1] %}
+{% set nextLink = nextItem and pagination.hrefs[pagination.pageNumber + 1] %}
+
+{% set postNav = {
+  prevCondition: prevItem,
+  prevLink: prevLink,
+  nextCondition: nextItem,
+  nextLink: nextLink
+} %}
+
 <h1>{{ title }}</h1>
+
 {% for post in posts %}
   <section class="box">
     <h2>
-      <a class="post__link" href="{{ post.url }}">
-        {{ post.data.title }}
-        <span class="material-symbols-outlined">arrow_outward</span>
-      </a>
+      <a class="post__link" href="{{ post.url }}"><span>{{ post.data.title }}</span></a>
+      <span class="material-symbols-outlined">arrow_outward</span>
     </h2>
-    <span>Published: {{ post.data.date }}</span>
+    <span>Published: {{ post.data.date.toLocaleDateString() }}</span>
   </section>
 {% endfor %}
-{% include "partials/postnav.njk" %}
+
+{{ postnav(postNav) }}

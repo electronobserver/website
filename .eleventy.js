@@ -4,12 +4,46 @@ const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItAttrs = require("markdown-it-attrs");
 
-module.exports = function (eleventyConfig) {
+module.exports = async function (eleventyConfig) {
+  const EleventyPluginOgImage = (await import('eleventy-plugin-og-image')).default;
+  const fs = (await import('fs')).default;
+  const path = (await import('path')).default;
+  eleventyConfig.addPlugin(EleventyPluginOgImage, {
+    satoriOptions: {
+      fonts: [
+        {
+          name: 'FontBold',
+          data: fs.readFileSync('./src/assets/fonts/IBMPlexSans-Bold.woff'),
+          weight: 700,
+          style: 'bold',
+        },
+      ],
+    },
+    shortcodeOutput: async (ogImage) => {
+      const siteDomain = "https://electron.observer";
+      const url = await ogImage.outputUrl();
+      return `<meta property="og:image" content="${siteDomain}${url}" />`;
+    },
+  });
+  
+  eleventyConfig.addNunjucksAsyncShortcode(
+    `inlineImage`,
+    async (arg) => {
+      let extension = path.extname(arg).slice(1)
+      let imgPath = path.join(eleventyConfig.dir.input, arg)
+      let base64Image = await fs.readFileSync(imgPath, `base64`)
+    
+      if (extension === `svg`) {
+      extension = `svg+xml`
+      }
+      return `data:image/${extension};base64,${base64Image}`
+    },
+  );
+
   eleventyConfig.addPlugin(eleventyImageTransformPlugin);
   eleventyConfig.addPlugin(feedPlugin, {
 		type: "rss", 
 		outputPath: "/feed.xml",
-    eleventyExcludeFromCollections: true,
 		collection: {
 			name: "posts", 
 			limit: 10,  

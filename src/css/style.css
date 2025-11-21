@@ -12,8 +12,8 @@ html,
 body {
     height: 100%;
     font-family: 'Roboto Mono', monospace;
-    background-color: #fff;
-    color: #000;
+    background-color: #fdfdfd;
+    color: #2f2f2f;
 }
 
 /* Typography */
@@ -42,7 +42,7 @@ figcaption {
 }
 
 hr {
-    background: #000;
+    background: #2f2f2f;
 }
 
 img,
@@ -53,7 +53,6 @@ picture {
 
 /* Site Wrapper */
 :where(body) {
-    hyphens: auto;
     overflow-wrap: break-word;
 }
 
@@ -138,18 +137,19 @@ button,
     text-align: center;
     text-decoration: none;
     align-items: center;
-    color: #000;
-    background-color: #fff;
-    border: 2px solid #000;
-    box-shadow: 4px 4px 0 #000;
+    color: #2f2f2f;
+    background-color: #fdfdfd;
+    border: 2px solid #2f2f2f;
+    box-shadow: 4px 4px 0 #2f2f2f;
     cursor: pointer;
     transition: all 0.2s ease;
     font-family: 'Roboto Mono', monospace;
 }
 
+/* TODO: Not exactly sure why OP made a class too, should probably scrape this? */
 button:hover,
 .button:hover {
-    box-shadow: 6px 6px 0 #000;
+    box-shadow: 6px 6px 0 #2f2f2f;
 }
 
 .button__content {
@@ -166,8 +166,8 @@ select {
     width: 100%;
     padding: 0.75rem;
     margin-bottom: 1rem;
-    border: 2px solid #000;
-    box-shadow: 4px 4px 0 #000;
+    border: 2px solid #2f2f2f;
+    box-shadow: 4px 4px 0 #2f2f2f;
     font-family: 'Roboto Mono', monospace;
 }
 
@@ -190,10 +190,34 @@ select[multiple] {
 /* Boxes */
 .box {
     padding: 1rem;
-    border: 2px solid #000;
-    box-shadow: 4px 4px 0 #000;
+    border: 2px solid #2f2f2f;
+    box-shadow: 4px 4px 0 #2f2f2f;
     margin-bottom: 1rem;
 }
+
+blockquote {
+    padding: 1rem 1rem 1rem 3rem; /* extra left space for the big quote */
+    border: 2px solid #2f2f2f;
+    box-shadow: 4px 4px 0 #2f2f2f;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+blockquote::before {
+    content: open-quote;
+    font-size: 4em;
+    line-height: -0.1em;
+    color: #2f2f2f;
+
+    position: absolute;
+    left: 0.5rem;
+    top: 0.2rem;
+}
+
+blockquote > p {
+    display: block;
+}
+
 
 /* Utility Classes */
 .text-center {
@@ -235,24 +259,24 @@ select[multiple] {
 /* Alerts */
 .alert {
     padding: 1rem;
-    border: 2px solid #000;
-    box-shadow: 4px 4px 0 #000;
+    border: 2px solid #2f2f2f;
+    box-shadow: 4px 4px 0 #2f2f2f;
     margin-bottom: 1rem;
 }
 
 .alert-info {
     background-color: #e7f5ff;
-    color: #000;
+    color: #2f2f2f;
 }
 
 .alert-warning {
     background-color: #fff3cd;
-    color: #000;
+    color: #2f2f2f;
 }
 
 .alert-danger {
     background-color: #f8d7da;
-    color: #000;
+    color: #2f2f2f;
 }
 
 /* Modals */
@@ -269,24 +293,24 @@ select[multiple] {
 }
 
 .modal-content {
-    background-color: #fff;
+    background-color: #fdfdfd;
     padding: 2rem;
-    border: 2px solid #000;
-    box-shadow: 4px 4px 0 #000;
+    border: 2px solid #2f2f2f;
+    box-shadow: 4px 4px 0 #2f2f2f;
 }
 
 /* Progress Bars */
 .progress {
     width: 100%;
     background-color: #e0e0e0;
-    border: 2px solid #000;
-    box-shadow: 4px 4px 0 #000;
+    border: 2px solid #2f2f2f;
+    box-shadow: 4px 4px 0 #2f2f2f;
     height: 1.5rem;
 }
 
 .progress-bar {
     height: 100%;
-    background-color: #000;
+    background-color: #2f2f2f;
     width: 0;
     transition: width 0.2s ease;
 }
@@ -310,8 +334,8 @@ select[multiple] {
 /* Code Container */
 .code-container {
     background-color: #f5f5f5;
-    border: 2px solid #000;
-    box-shadow: 4px 4px 0 #000;
+    border: 2px solid #2f2f2f;
+    box-shadow: 4px 4px 0 #2f2f2f;
     padding: 1rem;
     font-family: 'Roboto Mono', monospace;
     margin-bottom: 1rem;
@@ -347,17 +371,17 @@ a:hover {
 }
 
 .anchor:hover .anchor__icon {
-    stroke: black;
+    stroke: #2f2f2f;
 }
 
-.decorated-link {
-    color: #000;
-    text-decoration: none;
-}
-
-.decorated-link:hover {
-    background-color: transparent;
-    text-decoration: underline;
+/* from muan chiou  */
+a[href^="http"]::after {
+    content: '┓';
+    font-size: 0.5em;
+    position: absolute;
+    margin-top: calc(1rem - 1.7em);
+    line-height: 1em;
+    text-decoration: none
 }
 
 /* Lists */
@@ -380,7 +404,7 @@ li {
 
 /* Header + Navbar Assets */
 header {
-    background-color: #fff;
+    background-color: #fdfdfd;
     position: sticky;
     z-index: 10;
     width: 100%;
@@ -400,7 +424,7 @@ header {
     height: auto;
 }
 
-/* TODO: Be sure to make mix-ins for these link classes later */
+
 .navbar__list {
     display: flex;
     column-gap: 40px;
@@ -409,17 +433,26 @@ header {
     margin: 1em;
 }
 
+/* TODO: Be sure to make mix-ins for these link classes later this looks uggo */
+.footer__link,
 .navbar__link,
 .post__link {
     font-weight: bold;
-    color: #000;
-    text-decoration: none;
+    color: #2f2f2f;
+    text-decoration: none; 
 }
 
 .footer__link:hover,
 .navbar__link:hover,
 .post__link:hover {
     background-color: transparent;
+    text-decoration: none;
+}
+
+.footer__link:hover span,
+.navbar__link:hover span,
+.post__link:hover span {
+    text-decoration: underline; 
 }
 
 .hamburger {
@@ -430,7 +463,7 @@ header {
 .bar {
     height: 3px;
     width: 30px;
-    background: #000;
+    background: #2f2f2f;
     margin: 5px 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -461,13 +494,12 @@ header {
 }
 
 .footer__link {
-    color: #000;
-    text-decoration: none;
+    display: inline-block;
 }
 
 .footer__content {
     text-align: center;
-    font-size: smaller;
+    font-size: 0.75rem;
     padding: 1rem 0 1rem;
 }
 
@@ -477,8 +509,9 @@ header {
 }
 
 .footer__list {
-    display: flex;
+    display: flex;    
     column-gap: 0.5rem;
+    white-space: nowrap;
     justify-content: center;
     align-items: center;
     list-style-type: none;
@@ -550,7 +583,7 @@ header {
     width: 40px;
     height: 40px;
     margin: -20px 0 0 -20px;
-    background: #000;
+    background: #2f2f2f;
     outline: 5px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     animation: float 3s ease-in-out infinite;
@@ -589,8 +622,12 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    animation: spin 6s linear infinite;
+    animation: spin 9s linear infinite;
     transform-style: preserve-3d;
+}
+
+.atom__orbit:nth-child(3) .atom__path {
+    animation-direction: reverse;
 }
 
 .atom__electron {
@@ -599,7 +636,7 @@ header {
     transform: translate(50%, -50%);
     width: 15px;
     height: 15px;
-    background: #000;
+    background: #2f2f2f;
     border-radius: 50%;
 }
 
@@ -758,13 +795,15 @@ header {
 
 }
 
+.postnav button,
 .postnav .button {
     display: inline-block;
     font-weight: bold;
     text-decoration: none;
-    color: #000;
+    color: #2f2f2f;
 }
 
+.postnav button:hover, 
 .postnav .button:hover {
     background-color: transparent;
 }
@@ -789,13 +828,13 @@ header {
     .navbar {
         position: absolute;
         display: block;
-        width: calc(100% + 2em) !important; /* full width including container padding */
+        width: calc(100% + 2em) !important; /*  for future vars: full width including container padding */
         margin: 0 -1rem 0 -1rem;
-        top: calc(40px + 1rem);   /* height of logo + header padding */
+        top: calc(40px + 1rem);   /* for future vars: height of logo + header padding */
         max-height: 0;    
         overflow: hidden;            
         z-index: 1;
-        background-color: #000;                                   
+        background-color: #2f2f2f;                                   
         text-transform: uppercase;
         font-weight: normal;
         transition: max-height 0.6s ease-in-out; 
@@ -809,17 +848,17 @@ header {
 
     .navbar__link {
         font-weight: normal;
-        color: #fff;
+        color: #fdfdfd;
         text-decoration: none;
     }
 
-    .navbar__link::after {
+    .navbar__link span::after {
         content: "/";
     }
 
     .navbar--open {
         max-height: calc(100vh - (40px + 2rem)); 
-        background: #000; 
+        background: #2f2f2f; 
     }
 
     .hamburger {

@@ -6,19 +6,23 @@ pagination:
   alias: tag
   filter: ['posts', 'all']
   addAllPagesToCollections: true
-layout: "base.njk"
-permalink: '/tagged/{{ tag | slugify }}/index.html'
 eleventyComputed:
   title: "Tagged: '{{ tag }}'"
+layout: "base.njk"
+permalink: '/tagged/{{ tag | slugify }}/index.html'
 ---
 <h1>{{ title }}</h1>
+
 {% for post in collections[tag] | reverse %}
   <section class="box">
     <h2>
-      <a class="post__link" href="{{ post.url }}">{{ post.data.title }}
-        <span class="material-symbols-outlined">arrow_outward</span>
+      <a class="post__link" href="{{ post.url }}">
+        <span>{{ post.data.title }}</span>
       </a>
+      <span class="material-symbols-outlined">arrow_outward</span>
     </h2>
-    <span>Published: {{ post.data.date }}</span>
+    <span>Published: {{ post.data.date.toLocaleDateString() }}</span>
   </section>
 {% endfor %}
+
+{# TODO: add double pagination #}

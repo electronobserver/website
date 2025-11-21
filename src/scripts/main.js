@@ -83,7 +83,10 @@ function readTime() {
     document.getElementById("js-read-time").textContent = Math.ceil(readTime) + " " + "min read";
 }
 
-function splashText() {
+function indexAnim() {
+    const title = document.getElementById('js-title');
+    new textScramble(title).setText('ELECTRON OBSERVER');
+
     const quotesFile = new Request('/scripts/splash.json');
     fetch(quotesFile)
         .then(response => response.json())
@@ -92,7 +95,7 @@ function splashText() {
             document.getElementById("js-splash-text").textContent = quotes[randomIndex];
         });
 }
-
+  
 const footerYear = document.getElementById("js-footer-year");
 footerYear.textContent = new Date().getFullYear();
 
@@ -106,9 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 if (window.location.pathname=='/index'|| window.location.pathname=='/') {
-    const wordmarkTitle = document.getElementById('js-wordmark-title');
-    new textScramble(wordmarkTitle).setText('ELECTRON OBSERVER');
-    splashText();
+    indexAnim();
 } else if (window.location.pathname.startsWith('/posts')) {
     readTime();
 }

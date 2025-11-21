@@ -1,47 +1,49 @@
 <head>
+  {# Essential Stuff #}
   <meta charset="UTF-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta http-equiv="content-language" content="en-US" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <!-- Basic stuff -->
+  {# Basic Stuff #}
   <title>{{ title }} | Electron Observer</title>
   <meta name="author" content="Hugo Takizala"/>
-  <meta name="description" content="{{ description or renderData.description | escape }}"/>
-  <meta name="theme-color" content="#fff"/> 
+  <meta name="description" content="{{ description or site.description | escape }}"/>
+  <meta name="theme-color" content="#ffffff"/> 
   <meta name="generator" content="{{ eleventy.generator }}">
 
-  <!-- OpenGraph for Facebook/Xitter -->
-  <meta property="og:title" content="{{ title or renderData.title or metadata.title | escape }}">
-  <meta property="og:site_name" content="Electron Observer">
-  <meta property="og:description" content="{{ description or renderData.description | escape }}">
+  {# OpenGraph for Facebook/Xitter #}
+  <meta property="og:title" content="{{ title or site.title | escape }}">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:description" content="{{ description or site.description | escape }}">
   <meta property="og:type" content="{{ type or 'website' }}">
   <meta property="og:locale" content="{{ locale | default('en_US') }}">
-  <meta property="og:url" content="https://electron.observer{{ page.url }}">
-  <meta property="og:image" content="https://electron.observer/images/favicon/PrismFavicon.png">
-  <meta property="og:image:alt" content="Dispersive Prism">
-  <meta property="og:image:width" content="800">
-  <meta property="og:image:height" content="800">
-  <meta name="twitter:title" content="{{ title or renderData.title or metadata.title | escape }}">
-  <meta name="twitter:description" content="{{ description or renderData.description | escape }}">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:url" content="{{ page.url | absoluteUrl(site.domain) }}">
+  {% setAsync "ogUrl" -%}
+    {% ogImage "./og-image.og.njk", { title: title or site.title | escape } %}
+  {%- endsetAsync %}
+  {{ ogUrl | safe }}
+  <meta property="og:image:alt" content="Preview image for: {{ title or site.title | escape }}">
+  <meta name="twitter:title" content="{{ title or site.title | escape }}">
+  <meta name="twitter:description" content="{{ description or site.description | escape }}">
+  <meta name="twitter:card" content="summary_large_image">
 
-  <!-- SEO -->
-  <meta name="robots" content="index, follow"/>
-  <link rel="canonical" href="https://electron.observer"/>
+  {# SEO Options #}
+  <link rel="canonical" href="{{ page.url | absoluteUrl(site.domain) }}"/>
+  {%- if metadata.noRobots %}<meta name="robots" content="noindex, nofollow">{%- endif %}
 
-  <!-- Icons & Stylesheets -->
+  {# Icons & Stylesheets #}
   <link rel="stylesheet" href="/css/style.css"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"/>
   <link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg" />
-  <link rel="shortcut icon" href="/images/favicon/favicon.ico" />
+  <link rel="shortcut icon" href="/images/favicon/favicon.ico" type="image/x-icon"/>
   <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="Electron Observer" />
   <link rel="manifest" href="/images/favicon/site.webmanifest" />
   
-  <!-- Scripts -->
+  {# Scripts #}
   <script defer src="/scripts/main.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 </head>
