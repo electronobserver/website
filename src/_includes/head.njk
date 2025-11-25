@@ -1,0 +1,50 @@
+<head>
+  {# Essential Stuff #}
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta http-equiv="content-language" content="en-US" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  {# Basic Stuff #}
+  <title>{{ title }} | Electron Observer</title>
+  <meta name="author" content="Hugo Takizala"/>
+  <meta name="description" content="{{ description or site.description | escape }}"/>
+  <meta name="theme-color" content="#ffffff"/> 
+  <meta name="generator" content="{{ eleventy.generator }}">
+
+  {# OpenGraph for Facebook/Xitter #}
+  <meta property="og:title" content="{{ title or site.title | escape }}">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:description" content="{{ description or site.description | escape }}">
+  <meta property="og:type" content="{{ type or 'website' }}">
+  <meta property="og:locale" content="{{ locale | default('en_US') }}">
+  <meta property="og:url" content="{{ page.url | absoluteUrl(site.domain) }}">
+  {% setAsync "ogUrl" -%}
+    {% ogImage "./pages/og-image.og.njk", { title: title or site.title | escape } %}
+  {%- endsetAsync %}
+  {{ ogUrl | safe }}
+  <meta property="og:image:alt" content="Preview image for: {{ title or site.title | escape }}">
+  <meta name="twitter:title" content="{{ title or site.title | escape }}">
+  <meta name="twitter:description" content="{{ description or site.description | escape }}">
+  <meta name="twitter:card" content="summary_large_image">
+
+  {# SEO Options #}
+  <link rel="canonical" href="{{ page.url | absoluteUrl(site.domain) }}"/>
+  {%- if metadata.noRobots %}<meta name="robots" content="noindex, nofollow">{%- endif %}
+
+  {# Icons & Stylesheets #}
+  <link rel="stylesheet" href="/assets/css/style.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"/>
+  <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico" type="image/x-icon"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Electron Observer" />
+  <link rel="manifest" href="/assets/images/favicon/site.webmanifest" />
+  
+  {# Scripts #}
+  <script defer src="/assets/scripts/main.js"></script>
+  <script src="https://unpkg.com/open-heart-element" type="module"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+</head>

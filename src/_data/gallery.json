@@ -1,3 +1,94 @@
 [
-  
+    {
+        "title": "Atrium",
+        "slug": "atrium",
+        "thumbnail": "atrium-thumbnail.jpg",
+        "image": "atrium.webp",
+        "alt": "Hotel atrium with walkways interconnected to an elevator shaft.",
+        "thumbnailcaption": "atrium",
+        "caption": "The atrium of the Hyatt Regency O'Hare hotel located in Rosemont, IL.",
+        "camera": {
+            "make": "Sony",
+            "model": "α6400",
+            "lens": "Sigma 18-50mm f/2.8 DC DN",
+            "aperture": "f/2.8",
+            "shutter_speed": "1/250s",
+            "iso": 3200,
+            "focal_length": "18mm"
+        },
+        "date": "2025-12-06",
+        "tags": [
+            "gallery",
+            "photos"
+        ]
+    },
+    {
+        "title": "Maverick",
+        "slug": "maverick",
+        "thumbnail": "maverick-thumbnail.jpg",
+        "image": "maverick.webp",
+        "alt": "Neon store sign depicting a cowboy labeled 'Maverick'.",
+        "thumbnailcaption": "maverick",
+        "caption": "The glowing neon sign of Maverick Western Wear in Fort Worth, TX.",
+        "camera": {
+            "make": "Sony",
+            "model": "α6400",
+            "lens": "Sigma 18-50mm f/2.8 DC DN",
+            "aperture": "f/2.8",
+            "shutter_speed": "1/250s",
+            "iso": 400,
+            "focal_length": "35mm"
+        },
+        "date": "2025-12-26",
+        "tags": [
+            "gallery",
+            "photos"
+        ]
+    },
+    {
+        "title": "Paramount",
+        "slug": "paramount",
+        "thumbnail": "paramount-thumbnail.JPG",
+        "image": "paramount.webp",
+        "alt": "Defunct Paramount Studios Building",
+        "thumbnailcaption": "paramount",
+        "caption": "Defunct Paramount Studios office building.",
+        "camera": {
+            "make": "Sony",
+            "model": "α6400",
+            "lens": "Sigma 18-50mm f/2.8 DC DN",
+            "aperture": "f/2.8",
+            "shutter_speed": "1/2000s",
+            "iso": 400,
+            "focal_length": "50mm"
+        },
+        "date": "2025-12-28",
+        "tags": [
+            "gallery",
+            "photos"
+        ]
+    },
+    {
+        "title": "Superstitious",
+        "slug": "superstitious",
+        "thumbnail": "superstitious-thumbnail.jpg",
+        "image": "superstitious.webp",
+        "alt": "Praying hands rock formation next to a saguaro cactus.",
+        "thumbnailcaption": "superstitious",
+        "caption": "Superstition Mountains' praying hands formation (Apache Junction, AZ).",
+        "camera": {
+            "make": "Sony",
+            "model": "α6400",
+            "lens": "Sigma 18-50mm f/2.8 DC DN",
+            "aperture": "f/2.8",
+            "shutter_speed": "1/640s",
+            "iso": 100,
+            "focal_length": "18mm"
+        },
+        "date": "2026-01-17",
+        "tags": [
+            "gallery",
+            "photos"
+        ]
+    }
 ]

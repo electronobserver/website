@@ -1,0 +1,9 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/likes"
+  to = "/.netlify/functions/likes"
+  status = 200
+  force = true
