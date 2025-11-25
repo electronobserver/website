@@ -21,7 +21,7 @@ permalink: '/tagged/{{ tag | slugify }}/index.html'
       </a>
       <span class="material-symbols-outlined">arrow_outward</span>
     </h2>
-    <span>Published: {{ post.data.date.toLocaleDateString() }}</span>
+    <span>Published: {{ post.data.date | datePost }}</span>
   </section>
 {% endfor %}
 

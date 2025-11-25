@@ -12,7 +12,7 @@ eleventyComputed:
 layout: "base.njk"
 permalink: "gallery/page/{{ pagination.pageNumber + 1 }}/index.html"
 ---
-{% from "partials/macros.njk" import postnav %}
+{% from "macros.njk" import postnav %}
 {% set postNav = {
   prevCondition: pagination.pageNumber > 0,
   prevLink: pagination.hrefs[pagination.pageNumber - 1],

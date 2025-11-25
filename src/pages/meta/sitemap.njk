@@ -12,7 +12,7 @@ eleventyExcludeFromCollections: true
     {%- for page in collections.all | reverse | reject("equalto", "/feed.xml")%}
         <url>
             <loc>{{ page.url | absoluteUrl(site.domain) }}</loc>
-            <lastmod>{{ page.date.toLocaleDateString() }}</lastmod>
+            <lastmod>{{ page.date | dateSitemap }}</lastmod>
             <changefreq>{{ page.data.changefreq | default("monthly") }}</changefreq>
         </url>
     {%- endfor %}

@@ -1,7 +1,7 @@
 /*
-* Text Scramble by Justin Windle (soulwire)
-* source: (https://codepen.io/soulwire/pen/mErPAK) 
-*/
+ * Text Scramble by Justin Windle (soulwire)
+ * source: (https://codepen.io/soulwire/pen/mErPAK) 
+ */
 class textScramble {
     constructor(el) {
         this.el = el
@@ -57,7 +57,7 @@ class textScramble {
 }
 
 function displayLogo() {
-    const logoFile = new Request('/scripts/logo.txt');
+    const logoFile = new Request('/assets/scripts/logo.txt');
     fetch(logoFile)
         .then(response => response.text())
         .then(console.log);
@@ -87,7 +87,7 @@ function indexAnim() {
     const title = document.getElementById('js-title');
     new textScramble(title).setText('ELECTRON OBSERVER');
 
-    const quotesFile = new Request('/scripts/splash.json');
+    const quotesFile = new Request('/assets/scripts/splash.json');
     fetch(quotesFile)
         .then(response => response.json())
         .then(quotes => {
@@ -96,9 +96,6 @@ function indexAnim() {
         });
 }
   
-const footerYear = document.getElementById("js-footer-year");
-footerYear.textContent = new Date().getFullYear();
-
 // NOTE: The other GLightbox script needs to load first before initializing, adding this as a guard just to be safe
 document.addEventListener('DOMContentLoaded', () => {
     GLightbox({

@@ -1,7 +1,7 @@
 ---
 layout: "base.njk"    
 ---
-{% from "partials/macros.njk" import postnav %}
+{% from "macros.njk" import postnav %}
 {% set prevItem = collections.posts | getPreviousCollectionItem(page) %}
 {% set nextItem = collections.posts | getNextCollectionItem(page) %}
 {% set prevLink = prevItem and prevItem.url %}
@@ -19,7 +19,7 @@ layout: "base.njk"
 <article>
   <h1>{{ title }}</h1>
     <span class="postdata">
-      Published: {{ date.toLocaleDateString() }} &bull;
+      Published: {{ date | datePost }} &bull;
       <span id="js-read-time"></span><br>
     </span>
 

@@ -11,7 +11,7 @@ eleventyComputed:
 layout: "base.njk"
 permalink: "/photos/{{ item.slug }}/index.html"
 ---
-{% from "partials/macros.njk" import postnav %}
+{% from "macros.njk" import postnav %}
 {% set postNav = {
   prevCondition: pagination.pageNumber > 0,
   prevLink: pagination.hrefs[pagination.pageNumber - 1],
@@ -23,7 +23,7 @@ permalink: "/photos/{{ item.slug }}/index.html"
 
 <div class="box">
   <h1>{{ item.title }}</h1>
-  <span class="postdata">Published: {{ item.date }}</span>
+  <span class="postdata">Published: {{ item.date | datePost }}</span>
   <figure>
     <a href="/gallery/{{ item.image }}" class="glightbox">
       <img src="/gallery/{{ item.image }}" alt="{{ item.alt }}">

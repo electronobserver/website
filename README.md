@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="src/images/logo-alt.png" alt="Phasefive Electronics logo by SCJREAL" width="200px">
+    <img src="src/assets/images/logo-alt.png" alt="Phasefive Electronics logo by SCJREAL" width="200px">
 </div>
 
 # About
