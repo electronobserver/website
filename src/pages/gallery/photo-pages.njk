@@ -25,8 +25,8 @@ permalink: "/photos/{{ item.slug }}/index.html"
   <h1>{{ item.title }}</h1>
   <span class="postdata">Published: {{ item.date | datePost }}</span>
   <figure>
-    <a href="/gallery/{{ item.image }}" class="glightbox">
-      <img src="/gallery/{{ item.image }}" alt="{{ item.alt }}">
+    <a href="/assets/images/gallery/{{ item.image }}" class="glightbox">
+      <img src="/assets/images/gallery/{{ item.thumbnail }}" alt="{{ item.alt }}">
     </a>
     <figcaption>{{ item.caption }}</figcaption>
   </figure>

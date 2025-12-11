@@ -1,3 +1,13 @@
 [
-  
+    {
+        "title": "Atrium",
+        "slug": "atrium",
+        "thumbnail": "atrium-thumbnail.jpg",
+        "image": "atrium.webp",
+        "alt": "Hotel atrium photograph",
+        "thumbnailcaption": "atrium",
+        "caption": "The atrium of the Hyatt Regency O'Hare hotel located in Rosemont, IL.",
+        "date": "2025-12-06",
+        "tags": ["gallery", "photos"]
+    }
 ]

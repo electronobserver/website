@@ -2,18 +2,30 @@ import { DateTime } from "luxon";
 
 const timeZone = 'America/Phoenix';
 
+const toISO = (date) => {
+    return (date instanceof Date)
+        ? date.toISOString()
+        : DateTime.fromISO(date).toISO();
+};
+
 const datePost = (date) => {
-	const myDate = DateTime.fromISO(date.toISOString()).setZone(timeZone).toFormat('MM/dd/yyyy')
-    return myDate;
-}
+    const iso = toISO(date);
+    return DateTime
+        .fromISO(iso)
+        .setZone(timeZone)
+        .toFormat('MM/dd/yyyy');
+};
 
 // Sitemaps require the YYYY-MM-DD format
 const dateSitemap = (date) => {
-	const myDate = DateTime.fromISO(date.toISOString()).setZone(timeZone).toFormat('yyyy-MM-dd')
-    return myDate;
+    const iso = toISO(date);
+    return DateTime
+        .fromISO(iso)
+        .setZone(timeZone)
+        .toFormat('yyyy-MM-dd');
 }
 
 export default {
-	dateSitemap,
+    dateSitemap,
     datePost
 };
