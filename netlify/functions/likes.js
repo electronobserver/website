@@ -1,9 +1,21 @@
-import { getStore } from "@netlify/blobs"
+const CORS_HEADERS = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "POST, OPTIONS"
+}
 
 export async function handler(event) {
+  if (event.httpMethod === "OPTIONS") {
+    // Preflight request
+    return {
+      statusCode: 204,
+      headers: CORS_HEADERS,
+    }
+  }
+
   if (event.httpMethod !== "POST") {
     return {
       statusCode: 405,
+      headers: CORS_HEADERS,
       body: "method not allowed"
     }
   }
@@ -14,6 +26,7 @@ export async function handler(event) {
   if (!id || !emoji) {
     return {
       statusCode: 400,
+      headers: CORS_HEADERS,
       body: "not ok"
     }
   }
@@ -26,12 +39,7 @@ export async function handler(event) {
 
   return {
     statusCode: 200,
+    headers: CORS_HEADERS,
     body: "ok"
   }
-}
-
-function ensureEmoji(emoji) {
-  const segments = Array.from(new Intl.Segmenter({ granularity: 'grapheme' }).segment(emoji.trim()))
-  const parsedEmoji = segments.length > 0 ? segments[0].segment : null
-  if (/\p{Emoji}/u.test(parsedEmoji)) return parsedEmoji
 }
