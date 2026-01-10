@@ -11,6 +11,7 @@ eleventyComputed:
 layout: "base.njk"
 permalink: "/photos/{{ item.slug }}/index.html"
 ---
+
 {% from "macros.njk" import postnav %}
 {% set postNav = {
   prevCondition: pagination.pageNumber > 0,
@@ -20,16 +21,24 @@ permalink: "/photos/{{ item.slug }}/index.html"
   prevText: "Older",
   nextText: "Newer" 
 } %}
-
 <div class="box">
   <h1>{{ item.title }}</h1>
   <span class="postdata">Published: {{ item.date | datePost }}</span>
   <figure>
-    <a href="/assets/images/gallery/{{ item.image }}" class="glightbox">
-      <img src="/assets/images/gallery/{{ item.thumbnail }}" alt="{{ item.alt }}">
-    </a>
-    <figcaption>{{ item.caption }}</figcaption>
-  </figure>
-</div>
-
-{{ postnav(postNav) }}
+    <a href="/assets/images/gallery/{{ item.slug }}/{{ item.image }}" class="glightbox" data-glightbox="title:Camera Specs; description:{{ item.camera | cameraDesc }};">
+      <img src="/assets/images/gallery/{{ item.slug }}/{{ item.thumbnail }}" alt="{{ item.alt }}"></a>
+      <open-heart
+        id="js-openheart"
+        href="https://likes.electron.observer?id=photos-{{ item.slug }}"
+        emoji="❤️"
+        aria-labelledby="like-prompt"
+        tabindex="0"
+        role="button"
+        aria-busy="false">
+        <span class="on">Liked <span class="oh-heart">&hearts;</span>.</span>
+        <span class="off">Like?</span>
+      </open-heart>
+      <figcaption>{{ item.caption }}</figcaption>
+    </figure>
+  </div>
+  {{ postnav(postNav) }}

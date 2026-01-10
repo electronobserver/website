@@ -1,4 +1,5 @@
 import dateFilters from './config/filters/date.js'
+import dataFilters from './config/filters/data.js'
 import plugins from './config/plugins.js'
 import { shortcodes, asyncShortcodes } from "./config/shortcodes.js";
 
@@ -56,6 +57,12 @@ export default async function (eleventyConfig) {
     eleventyConfig.addFilter(filterName, dateFilters[filterName])
   });
 
+  // import data filters
+  Object.keys(dataFilters).forEach(filterName => {
+    eleventyConfig.addFilter(filterName, dataFilters[filterName])
+  });
+
+
   return {
     dir: {
       input: "src",
@@ -65,3 +72,4 @@ export default async function (eleventyConfig) {
     },
   };
 }
+

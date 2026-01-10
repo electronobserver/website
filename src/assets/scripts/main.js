@@ -95,20 +95,46 @@ function indexAnim() {
             document.getElementById("js-splash-text").textContent = quotes[randomIndex];
         });
 }
-  
-// NOTE: The other GLightbox script needs to load first before initializing, adding this as a guard just to be safe
+
 document.addEventListener('DOMContentLoaded', () => {
+
+    // GLightbox Config
     GLightbox({
         selector: '.glightbox',
         loop: true,
-        autoplayVideos: false
+        autoplayVideos: false,
+        descPosition: 'left'
     });
-});
+
+    const openHeartElement = document.getElementById('js-openheart');
+    if (!openHeartElement) return;
+
+    async function updateCount() {
+        try {
+            const res = await fetch(openHeartElement.href);
+            if (!res.ok) return;
+
+            const data = await res.json();
+            const emoji = openHeartElement.getAttribute('emoji');
+            const count = data[emoji] || 0;
+
+            openHeartElement.querySelectorAll('.off, .on').forEach(span => {
+                span.setAttribute('count', count);
+            });
+        } catch (err) {
+            console.error(err);
+        }
+    }
+
+    updateCount();
+    openHeartElement.addEventListener('js-openheart', updateCount);
+});      
 
 if (window.location.pathname=='/index'|| window.location.pathname=='/') {
     indexAnim();
 } else if (window.location.pathname.startsWith('/posts')) {
     readTime();
 }
+
 navbarToggle();
 displayLogo();

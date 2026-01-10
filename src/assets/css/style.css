@@ -36,8 +36,11 @@ p {
     display: block;
 }
 
-figcaption {
+figure {
     text-align: center;
+}
+
+figcaption {
     margin: .5rem 0 .5rem 0;
 }
 
@@ -759,11 +762,6 @@ header {
     height: 100%;
     object-fit: cover;
     transition: transform 0.6s ease, border 0.6s ease;
-    transition: transform 0.6s ease, border 0.6s ease;
-}
-
-.gallery__overlay:hover img {
-    transform: scale(1.05);
 }
 
 .gallery__text {
@@ -806,6 +804,61 @@ header {
 .postnav button:hover, 
 .postnav .button:hover {
     background-color: transparent;
+}
+
+/* OpenHeart Test CSS (slightly modified, will fully edit later)
+   Source: https://github.com/dddddddddzzzz/open-heart-element/blob/main/demo.css */
+
+open-heart {
+    display: inline-flex;
+    padding: 0.4em 0.8em;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform .3s;
+}
+
+.off {
+    transition: opacity .3s;
+}
+  
+.on {
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transform: scale(0);
+    transition: transform .3s;
+}
+
+open-heart .off::after,
+open-heart .on::after {
+  content: " (" attr(count) ")";
+  margin-left: 0.25em;
+  opacity: 0.8;
+}
+
+open-heart:not([disabled]):hover,
+open-heart:not([disabled]):focus {
+    transform: scale(1.2);
+}
+  
+[aria-pressed="true"] .on { 
+    transform: scale(1);
+    opacity: 1;
+}
+  
+[aria-pressed="true"] .off { opacity: 0; }
+  
+[aria-pressed="true"] .oh-heart { color: #f00; }
+  
+[aria-busy="true"] { animation: pulsate .4s infinite; }
+  
+@keyframes pulsate {
+    0% { transform: scale(1) }
+    100% { transform: scale(1.2) }
+}
+  
+[errored] {
+    opacity: .5;
 }
 
 /* Media Queries */

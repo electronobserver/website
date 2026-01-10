@@ -27,7 +27,7 @@ permalink: "gallery/page/{{ pagination.pageNumber + 1 }}/index.html"
     <figure>
       <a href="/photos/{{ item.slug }}">
         <div class="gallery__overlay">
-          <img src="/assets/images/gallery/{{ item.thumbnail }}" alt="{{ item.alt }}">
+          <img src="/assets/images/gallery/{{ item.slug }}/{{ item.thumbnail }}" alt="{{ item.alt }}">
           <span class="gallery__text">[{{ item.thumbnailcaption }}]</span>
         </div>
       </a>

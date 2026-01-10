@@ -1,0 +1,9 @@
+[build]
+  publish = "dist"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/likes"
+  status = 200
+  conditions = { Host = "likes.electron.observer" }

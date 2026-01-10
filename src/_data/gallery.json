@@ -7,7 +7,65 @@
         "alt": "Hotel atrium photograph",
         "thumbnailcaption": "atrium",
         "caption": "The atrium of the Hyatt Regency O'Hare hotel located in Rosemont, IL.",
+        "camera": {
+            "make": "Sony",
+            "model": "α6400",
+            "lens": "Sigma 18-50mm f/2.8 DC DN",
+            "aperture": "f/2.8",
+            "shutter_speed": "1/250s",
+            "iso": 3200,
+            "focal_length": "18mm"
+        },
         "date": "2025-12-06",
-        "tags": ["gallery", "photos"]
+        "tags": [
+            "gallery",
+            "photos"
+        ]
+    },
+    {
+        "title": "Maverick",
+        "slug": "maverick",
+        "thumbnail": "maverick-thumbnail.jpg",
+        "image": "maverick.webp",
+        "alt": "Neon sign of a cowboy labeled 'Maverick'",
+        "thumbnailcaption": "maverick",
+        "caption": "The glowing neon sign of Maverick Western Wear in Fort Worth, TX.",
+        "camera": {
+            "make": "Sony",
+            "model": "α6400",
+            "lens": "Sigma 18-50mm f/2.8 DC DN",
+            "aperture": "f/2.8",
+            "shutter_speed": "1/250s",
+            "iso": 400,
+            "focal_length": "35mm"
+        },
+        "date": "2025-12-26",
+        "tags": [
+            "gallery",
+            "photos"
+        ]
+    },
+    {
+        "title": "Paramount",
+        "slug": "paramount",
+        "thumbnail": "paramount-thumbnail.JPG",
+        "image": "paramount.webp",
+        "alt": "Defunct Paramount Studios Building",
+        "thumbnailcaption": "paramount",
+        "caption": "A defunct Paramount Studios office building, in Dallas, TX.",
+        "camera": {
+            "make": "Sony",
+            "model": "α6400",
+            "lens": "Sigma 18-50mm f/2.8 DC DN",
+            "aperture": "f/2.8",
+            "shutter_speed": "1/2000s",
+            "iso": 400,
+            "focal_length": "50mm"
+        },
+        "date": "2025-12-28",
+        "tags": [
+            "gallery",
+            "photos"
+        ]
     }
 ]
