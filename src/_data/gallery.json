@@ -6,7 +6,7 @@
         "image": "atrium.webp",
         "alt": "Hotel atrium with walkways interconnected to an elevator shaft.",
         "thumbnailcaption": "atrium",
-        "caption": "The cavernous atrium of the Hyatt Regency O'Hare hotel (Rosemont, IL).",
+        "caption": "The cavernous atrium of the Hyatt Regency O'Hare hotel in Rosemont, IL.",
         "camera": {
             "make": "Sony",
             "model": "α6400",
@@ -29,7 +29,7 @@
         "image": "maverick.webp",
         "alt": "Neon store sign depicting a cowboy labeled 'Maverick'.",
         "thumbnailcaption": "maverick",
-        "caption": "The glowing neon sign of Maverick Western Wear (Fort Worth, TX).",
+        "caption": "The glowing neon sign of Maverick Western Wear in Fort Worth, TX.",
         "camera": {
             "make": "Sony",
             "model": "α6400",
@@ -52,11 +52,7 @@
         "image": "paramount.webp",
         "alt": "Defunct Paramount Studios Building",
         "thumbnailcaption": "paramount",
-<<<<<<< HEAD
-        "caption": "Defunct Paramount Studios office building.",
-=======
-        "caption": "Defunct Paramount Studios office building (Dallas, TX).",
->>>>>>> 7bdfa4f (add superstiton mountains picture)
+        "caption": "Defunct Paramount Studios office building in Dallas, TX.",
         "camera": {
             "make": "Sony",
             "model": "α6400",
@@ -79,7 +75,7 @@
         "image": "superstitious.webp",
         "alt": "Praying hands rock formation next to a saguaro cactus.",
         "thumbnailcaption": "superstitious",
-        "caption": "Superstition Mountains' praying hands formation (Apache Junction, AZ).",
+        "caption": "Superstition Mountains' praying hands formation in Apache Junction, AZ.",
         "camera": {
             "make": "Sony",
             "model": "α6400",
